@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Templating</title>
+</head>
+<body>
+<div id="sampleArea"></div>
+<script src="jquery-3.1.1.min.js"></script>
+<script src="mustache.js"></script>
+<script src="main.js"></script>
+<script id="employeeTpl" type="text/template">
+{{#Employees}}
+<ul>
+	<li><h1>{{preferredFullName}}</h1></li>
+	<div>		
+		<h2>{{userId}}</h2>
+		<h3>{{jobTitleName}}</h3>
+		{{firstName}}
+		{{lastName}}
+		{{employeeCode}}
+		{{region}}
+		{{phoneNumber}}
+		<p>{{emailAddress}}</p>
+		<p>{{someThing.hobbies}}</p>
+	</div>
+</ul>
+{{/Employees}}
+</script>
+</body>
+</html>
