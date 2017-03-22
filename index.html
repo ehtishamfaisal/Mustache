@@ -4,27 +4,46 @@
 	<title>Templating</title>
 </head>
 <body>
+
+
 <div id="sampleArea"></div>
+<div id="Area"></div>
 <script src="jquery-3.1.1.min.js"></script>
 <script src="mustache.js"></script>
 <script src="main.js"></script>
 <script id="employeeTpl" type="text/template">
 {{#Employees}}
 <ul>
-	<li><h1>{{preferredFullName}}</h1></li>
+	<li><h3>{{preferredFullName}}</h3></li>
 	<div>		
-		<h2>{{userId}}</h2>
-		<h3>{{jobTitleName}}</h3>
+		{{userId}}
+		{{jobTitleName}}
 		{{firstName}}
 		{{lastName}}
 		{{employeeCode}}
 		{{region}}
 		{{phoneNumber}}
-		<p>{{emailAddress}}</p>
+		{{emailAddress}}
 		<p>{{someThing.hobbies}}</p>
 	</div>
 </ul>
 {{/Employees}}
 </script>
+<script id="productTpl" type="text/template">
+<ul>
+	<li><span>Product Name: </span>{{name}}</li>
+	<div>		
+		Price:<span>{{price}}</span>
+
+	</div>
+	<div>
+		Sale Tax: <span>{{salesTax}}</span>
+	</div>
+	<div>
+		Price after Sale Tax: <span>{{add}}</span>
+	</div>
+</ul>
+</script>
+
 </body>
 </html>
